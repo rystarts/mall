@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- srpingboot项目 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- 定义父模块的坐标 子模块继承它 -->
+	<groupId>com.rystars.mall</groupId>
+	<artifactId>mall</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>mall</name>
+	<description>mall project</description>
+	<!-- 父项目为pom pom文件只做整合子模块项目使用 -->
+	<packaging>pom</packaging>
+
+	<!-- 定义子模块 -->
+	<modules>
+		<module>mall-admin</module>
+		<module>mall-common</module>
+	</modules>
+
+	<!-- 配置依赖的版本号 -->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!--
+	 	此处注意
+	 	dependencies 引入依赖，所需要的依赖项子项目不用引入 直接使用，子项目如果想要改变版本号 覆盖依赖即可
+	 	dependencyManagement 只声明不引用，作为版本管理用，子项目引入依赖不写版本号默认为父项目的版本
+	 -->
+	<dependencies>
+		<!-- web启动器 包含SpringMvc的大量配置 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 查看父级相关依赖发现 yaml 依赖版本为1.33 存在漏洞  升级为2.0 -->
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<!-- 单元测试组件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- 打包插件 mvn package 打成jar -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,2 +1,1 @@
-# rystars-mall
-mall project
+1.初始化 构建springboot项目
