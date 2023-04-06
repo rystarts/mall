@@ -1,0 +1,24 @@
+#定义dev开发环境下的配置
+server:
+  #配置服务启动端口号
+  port: 8111
+spring:
+  #配置数据库链接
+  datasource:
+    #驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #用户名
+    username: mall
+    #密码
+    password: rystars-mall
+    #url
+    url: jdbc:mysql://1.14.62.114:3306/mall
+#mybatis配置
+mybatis:
+  #配置扫描xml路径
+  mapper-locations: com/rystars/mall/admin/**/conf/*.xml
+  #配置类型别名
+  type-aliases-package: com.rystars.mall.admin.**.bean
+  #打印执行SQL
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

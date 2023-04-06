@@ -15,13 +15,23 @@
 	<description>mall-admin project for mall</description>
 	<packaging>jar</packaging>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+	<!-- 引入子项目自己需要的依赖 parent已经定义了版本-->
+	<dependencies>
+		<!-- 引入公共子模块 -->
+		<dependency>
+			<groupId>com.rystars.mall</groupId>
+			<artifactId>mall-common</artifactId>
+		</dependency>
+		<!-- 引入mybatis-springboot启动器 -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- mysql连接 -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+		</dependency>
+	</dependencies>
 
 </project>
