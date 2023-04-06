@@ -1,5 +1,7 @@
 package com.rystars.mall.admin.pms.product_category.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.rystars.mall.admin.pms.product_category.bean.PmsProductCategory;
 import com.rystars.mall.admin.pms.product_category.mapper.PmsProductCategoryMapper;
 import com.rystars.mall.admin.pms.product_category.service.PmsProductCategoryService;
@@ -21,6 +23,13 @@ public class PmsProductCategoryServiceImpl implements PmsProductCategoryService 
         this.pmsProductCategoryMapper = pmsProductCategoryMapper;
     }
 
+
+    @Override
+    public PageInfo<PmsProductCategory> selectPageInfo(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<PmsProductCategory> pmsProductCategory = pmsProductCategoryMapper.selectAll();
+        return new PageInfo<>(pmsProductCategory);
+    }
 
     @Override
     public List<PmsProductCategory> selectAll() {

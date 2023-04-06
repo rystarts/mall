@@ -4,7 +4,7 @@
 
     <select id="selectAll" resultType="PmsProductCategory">
         SELECT *
-        FROM PMS_PRODUCT_CATEGORY;
+        FROM PMS_PRODUCT_CATEGORY
     </select>
 
     <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">
@@ -29,7 +29,7 @@
                 #{sort},
                 #{icon},
                 #{keywords},
-                #{description});
+                #{description})
     </insert>
 
     <update id="updateById" parameterType="map">

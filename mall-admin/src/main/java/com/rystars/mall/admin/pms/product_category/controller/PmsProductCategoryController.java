@@ -1,5 +1,6 @@
 package com.rystars.mall.admin.pms.product_category.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.rystars.mall.admin.pms.product_category.bean.PmsProductCategory;
 import com.rystars.mall.admin.pms.product_category.service.PmsProductCategoryService;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,12 @@ public class PmsProductCategoryController {
     public PmsProductCategoryController(PmsProductCategoryService pmsProductCategoryService) {
         this.pmsProductCategoryService = pmsProductCategoryService;
     }
+
+    @PostMapping("/query/raws")
+    public PageInfo<PmsProductCategory> selectPageInfo(int pageNum, int pageSize) {
+        return pmsProductCategoryService.selectPageInfo(pageNum, pageSize);
+    }
+
 
     @PostMapping("/query")
     public List<PmsProductCategory> selectAll() {

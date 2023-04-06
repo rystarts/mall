@@ -33,6 +33,8 @@
 		<mybatis-spring-boot-starter.version>3.0.1</mybatis-spring-boot-starter.version>
 		<mysql-connector-j.version>8.0.32</mysql-connector-j.version>
 		<mall-common.version>1.0.0-SNAPSHOT</mall-common.version>
+		<pagehelper-spring-boot-starter.version>1.4.6</pagehelper-spring-boot-starter.version>
+		<mybatis-xmlreload-spring-boot-starter.version>3.0.2</mybatis-xmlreload-spring-boot-starter.version>
 	</properties>
 
 	<!--
@@ -83,6 +85,11 @@
 				<groupId>com.rystars.mall</groupId>
 				<artifactId>mall-common</artifactId>
 				<version>${mall-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${pagehelper-spring-boot-starter.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

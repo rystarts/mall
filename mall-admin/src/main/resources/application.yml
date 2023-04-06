@@ -6,3 +6,18 @@ spring:
 server:
   servlet:
     context-path: /rystars
+#mybatis配置
+mybatis:
+  #配置扫描xml路径
+  mapper-locations: com/rystars/mall/admin/**/conf/*.xml
+  #配置类型别名
+  type-aliases-package: com.rystars.mall.admin.**.bean
+  #打印执行SQL
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#分页插件配置
+page helper:
+  #配置使用的方言 不配置会自动检测
+  helper-dialect: mysql
+  #使用参数合理化 如果传入错误的 开始 结束页数,会返回第一页或最后一页，false返回空。
+  reasonable: true
