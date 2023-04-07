@@ -1,7 +1,7 @@
-package com.rystars.mall.admin.pms.product_category.service;
+package com.rystars.mall.admin.pms.product.category.service;
 
 import com.github.pagehelper.PageInfo;
-import com.rystars.mall.admin.pms.product_category.bean.PmsProductCategory;
+import com.rystars.mall.admin.pms.product.category.bean.PmsProductCategory;
 
 import java.util.List;
 

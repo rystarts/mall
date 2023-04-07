@@ -1,4 +1,4 @@
-package com.rystars.mall.admin.pms.product_category.bean;
+package com.rystars.mall.admin.pms.product.category.bean;
 
 import lombok.Data;
 
@@ -7,6 +7,7 @@ import java.io.Serializable;
 /**
  * @author rystars
  * @date 2023/4/6
+ * 产品分类
  */
 @Data
 public class PmsProductCategory implements Serializable {

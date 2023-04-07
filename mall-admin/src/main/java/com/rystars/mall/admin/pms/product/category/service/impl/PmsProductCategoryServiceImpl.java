@@ -1,10 +1,10 @@
-package com.rystars.mall.admin.pms.product_category.service.impl;
+package com.rystars.mall.admin.pms.product.category.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.rystars.mall.admin.pms.product_category.bean.PmsProductCategory;
-import com.rystars.mall.admin.pms.product_category.mapper.PmsProductCategoryMapper;
-import com.rystars.mall.admin.pms.product_category.service.PmsProductCategoryService;
+import com.rystars.mall.admin.pms.product.category.mapper.PmsProductCategoryMapper;
+import com.rystars.mall.admin.pms.product.category.bean.PmsProductCategory;
+import com.rystars.mall.admin.pms.product.category.service.PmsProductCategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

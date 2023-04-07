@@ -1,6 +1,6 @@
-package com.rystars.mall.admin.pms.product_category.mapper;
+package com.rystars.mall.admin.pms.product.category.mapper;
 
-import com.rystars.mall.admin.pms.product_category.bean.PmsProductCategory;
+import com.rystars.mall.admin.pms.product.category.bean.PmsProductCategory;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
