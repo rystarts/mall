@@ -9,7 +9,7 @@ server:
 #mybatis配置
 mybatis:
   #配置扫描xml路径
-  mapper-locations: com/rystars/mall/admin/**/conf/*.xml
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
   #配置类型别名
   type-aliases-package: com.rystars.mall.admin.**.bean
   #打印执行SQL
@@ -21,3 +21,10 @@ page helper:
   helper-dialect: mysql
   #使用参数合理化 如果传入错误的 开始 结束页数,会返回第一页或最后一页，false返回空。
   reasonable: true
+# mybatis xml文件热加载配置
+mybatis-xml-reload:
+  # 是否开启 xml 热更新，true开启，false不开启，默认为false
+  enabled: true
+  # xml文件路径，可以填写多个，逗号分隔。
+  # eg: `classpath*:mapper/**/*Mapper.xml,classpath*:other/**/*Mapper.xml`
+  mapper-locations: classpath*:mapper/**/*Mapper.xml

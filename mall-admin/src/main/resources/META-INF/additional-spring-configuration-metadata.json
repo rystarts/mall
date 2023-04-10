@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "defaultValue": false,
+      "name": "mybatis-xml-reload.enabled",
+      "type": "java.lang.String",
+      "description": "配置是否开启xml自动刷新."
+    },
+    {
+      "defaultValue": "",
+      "name": "mybatis-xml-reload.mapper-locations",
+      "type": "java.lang.String",
+      "description": "配置刷新路径和mapper-locations保持一致即可."
+    }
+  ]
+}
