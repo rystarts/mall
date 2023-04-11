@@ -36,8 +36,21 @@ springdoc:
     #API的排序方式 alpha按字母排序
     tags-sorter: alpha
     #按HTTP方式排序
-    operations-sorter: method
-  #需要生成接口的扫描路径
-  packages-to-scan: com.rystars.mall.admin
+    #operations-sorter: method
   #需要生成接口的接口路径
   paths-to-match: /pms/**,/cms/**
+#使用jasypt对配置文件加密
+jasypt:
+  encryptor:
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    #配置加密算法
+    algorithm: PBEWithMD5AndDES
+    #解析的字符
+    property:
+      prefix: RYSTARS(
+      suffix: )
+    #加密口令
+#    方式一：直接作为程序启动时的命令行参数来带入 java -jar yourproject.jar --jasypt.encryptor.password=xxx
+#    方式二：直接作为程序启动时的应用环境变量来带入VM java -Djasypt.encryptor.password=xxx -jar yourproject.jar
+#    方式三：甚至可以作为系统环境变量的方式来带入 jasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD:}
+#    password: ${JASYPT_ENCRYPTOR_PASSWORD:}

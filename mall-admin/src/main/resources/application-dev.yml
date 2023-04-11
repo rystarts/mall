@@ -8,8 +8,10 @@ spring:
     #驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
     #用户名
-    username: mall
+    username: RYSTARS(hfe5OllBfO+rZsCD4NUwOw==)
     #密码
-    password: rystars-mall
+#    password: rystars-mall
+    password: RYSTARS(LaDjX+pgbKXd3s5ePIn8fQVMi1zaIqu0)
     #url
-    url: jdbc:mysql://1.14.62.114:3306/mall
+#    url: jdbc:mysql://1.14.62.114:3306/mall
+    url: RYSTARS(l0cKU/p4Ge5EkaURaPFI76gnzVgNSNuJ6USgy0fcEF6B9R8OjDPI4LIFycfXgui3)
