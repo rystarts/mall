@@ -1,0 +1,10 @@
+${AnsiColor.GREEN}
+                                    _
+                     _ __ _   _ ___| |_ __ _ _ __ ___
+                    | '__| | | / __| __/ _` | '__/ __|
+                    | |  | |_| \__ \ || (_| | |  \__ \
+                    |_|   \__, |___/\__\__,_|_|  |___/
+                          |___/
+${AnsiColor.BLUE}
+                    Rystars mall Version 1.0.0-SNAPSHOT --------->>>
+${AnsiStyle.UNDERLINE}
