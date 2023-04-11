@@ -50,7 +50,7 @@ jasypt:
       prefix: RYSTARS(
       suffix: )
     #加密口令
-#    方式一：直接作为程序启动时的命令行参数来带入 java -jar yourproject.jar --jasypt.encryptor.password=xxx
-#    方式二：直接作为程序启动时的应用环境变量来带入VM java -Djasypt.encryptor.password=xxx -jar yourproject.jar
+#    方式一：直接作为程序启动时的命令行参数来带入 java -jar project.jar --jasypt.encryptor.password=xxx
+#    方式二：直接作为程序启动时的应用环境变量来带入VM java -Djasypt.encryptor.password=xxx -jar project.jar
 #    方式三：甚至可以作为系统环境变量的方式来带入 jasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD:}
 #    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
