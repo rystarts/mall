@@ -1,11 +1,9 @@
 package com.rystars.mall.admin.pms.product.category.controller;
 
-import com.github.pagehelper.PageInfo;
 import com.rystars.mall.admin.pms.product.category.bean.PmsProductCategory;
 import com.rystars.mall.admin.pms.product.category.service.PmsProductCategoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -37,14 +35,6 @@ public class PmsProductCategoryController {
     public PmsProductCategoryController(PmsProductCategoryService pmsProductCategoryService) {
         this.pmsProductCategoryService = pmsProductCategoryService;
     }
-
-    @PostMapping("/query/raws")
-    @Operation(summary = "分页查询", description = "分页查询产品分类信息")
-    @Parameters(@Parameter(required = true))
-    public PageInfo<PmsProductCategory> selectPageInfo(int pageNum, int pageSize) {
-        return pmsProductCategoryService.selectPageInfo(pageNum, pageSize);
-    }
-
 
     @PostMapping("/query")
     @Operation(summary = "查询所有")

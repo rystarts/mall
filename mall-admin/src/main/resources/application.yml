@@ -89,12 +89,12 @@ mybatis-plus:
   #打印执行SQL
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#分页插件配置
-page helper:
+#分页插件配置 改用mybatis plus的分页
+#page helper:
   #配置使用的方言 不配置会自动检测
-  helper-dialect: mysql
+  #helper-dialect: mysql
   #使用参数合理化 如果传入错误的 开始 结束页数,会返回第一页或最后一页，false返回空。
-  reasonable: true
+  #reasonable: true
 #mybatis xml文件热加载配置
 mybatis-xml-reload:
   # 是否开启 xml 热更新，true开启，false不开启，默认为false

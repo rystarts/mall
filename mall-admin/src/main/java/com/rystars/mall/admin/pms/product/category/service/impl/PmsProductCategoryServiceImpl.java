@@ -1,9 +1,7 @@
 package com.rystars.mall.admin.pms.product.category.service.impl;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.rystars.mall.admin.pms.product.category.mapper.PmsProductCategoryMapper;
 import com.rystars.mall.admin.pms.product.category.bean.PmsProductCategory;
+import com.rystars.mall.admin.pms.product.category.mapper.PmsProductCategoryMapper;
 import com.rystars.mall.admin.pms.product.category.service.PmsProductCategoryService;
 import org.springframework.stereotype.Service;
 
@@ -21,14 +19,6 @@ public class PmsProductCategoryServiceImpl implements PmsProductCategoryService 
 
     public PmsProductCategoryServiceImpl(PmsProductCategoryMapper pmsProductCategoryMapper) {
         this.pmsProductCategoryMapper = pmsProductCategoryMapper;
-    }
-
-
-    @Override
-    public PageInfo<PmsProductCategory> selectPageInfo(int pageNum, int pageSize) {
-        PageHelper.startPage(pageNum, pageSize);
-        List<PmsProductCategory> pmsProductCategory = pmsProductCategoryMapper.selectAll();
-        return new PageInfo<>(pmsProductCategory);
     }
 
     @Override

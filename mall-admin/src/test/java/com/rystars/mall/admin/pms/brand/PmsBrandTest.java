@@ -1,5 +1,7 @@
 package com.rystars.mall.admin.pms.brand;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.rystars.mall.admin.pms.brand.bean.PmsBrand;
 import com.rystars.mall.admin.pms.brand.mapper.PmsBrandMapper;
 import com.rystars.mall.admin.pms.brand.service.PmsBrandService;
@@ -46,6 +48,14 @@ public class PmsBrandTest {
     public void selectFirst() {
         PmsBrand one = pmsBrandService.getFirst(null);
         logger.info(one.toString());
+    }
+
+    @Test
+    public void commonQuery() {
+        Page<PmsBrand> pmsBrandPage = new Page<>(1,2);
+        IPage<PmsBrand> pmsBrandIPage = pmsBrandService.getBaseMapper().selectPage(pmsBrandPage, null);
+        logger.info(String.valueOf(pmsBrandIPage.getPages()));
+        logger.info(String.valueOf(pmsBrandIPage.getTotal()));
     }
 
 }
