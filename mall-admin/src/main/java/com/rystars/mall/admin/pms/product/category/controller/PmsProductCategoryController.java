@@ -25,7 +25,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/pms/product-category")
+@RequestMapping("/pms/product/category")
 @Tag(name = "PmsProductCategoryController", description = "产品分类 API")
 @ApiResponses(@ApiResponse(responseCode = "200", description = "success"))
 public class PmsProductCategoryController {

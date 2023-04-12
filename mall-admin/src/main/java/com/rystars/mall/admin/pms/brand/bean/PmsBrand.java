@@ -1,7 +1,13 @@
 package com.rystars.mall.admin.pms.brand.bean;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.rystars.mall.admin.frame.base.bean.BaseBean;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.io.Serial;
+import java.io.Serializable;
 
 /**
  * @author rystars
@@ -11,7 +17,12 @@ import lombok.Data;
 
 @Data
 @Schema(description = "商品品牌信息")
-public class PmsBrand {
+@EqualsAndHashCode(callSuper = true)
+public class PmsBrand extends BaseBean<PmsBrand> implements Serializable {
+
+    @Serial
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 
     @Schema(description = "主键")
     private Long id;
