@@ -36,7 +36,7 @@
 		<springdoc-openapi-starter-webmvc-ui.version>2.1.0</springdoc-openapi-starter-webmvc-ui.version>
 		<jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
 		<druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
-		<log4j-core.version>2.20.0</log4j-core.version>
+		<mybatis-plus-boot-starter.version>3.5.3.1</mybatis-plus-boot-starter.version>
 	</properties>
 
 	<!--
@@ -109,9 +109,9 @@
 				<version>${druid-spring-boot-starter.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${log4j-core.version}</version>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus-boot-starter.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

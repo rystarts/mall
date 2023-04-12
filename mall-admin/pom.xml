@@ -18,10 +18,12 @@
 	<!-- 引入子项目自己需要的依赖 parent已经定义了版本-->
 	<dependencies>
 		<!-- 引入mybatis-springboot启动器 -->
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-		</dependency>
+		<!-- 已更换为mybatis-plus
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+			</dependency>
+		-->
 		<!-- mysql连接 -->
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -56,6 +58,11 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- 引入mybatis-plus启动器 -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
 		</dependency>
 	</dependencies>
 
