@@ -25,16 +25,16 @@ public class EncryptUtil {
      */
     public static void encrypt() {
         Scanner scan = new Scanner(System.in);
-        while (StringUtils.equals("y", scan.nextLine())) {
-            BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
-            LOGGER.info("------------password------------>>>");
-            String password = scan.nextLine();
+        LOGGER.info("------------password------------>>>");
+        String password = scan.nextLine();
+        BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
+        // 加密秘钥(盐)
+        textEncryptor.setPassword(password);
+        do {
             LOGGER.info("------------message------------>>>");
             String message = scan.nextLine();
-            // 加密秘钥(盐)
-            textEncryptor.setPassword(password);
             LOGGER.info(textEncryptor.encrypt(message));
-        }
+        } while (StringUtils.equalsAnyIgnoreCase("y", scan.nextLine()));
     }
 
     /**
