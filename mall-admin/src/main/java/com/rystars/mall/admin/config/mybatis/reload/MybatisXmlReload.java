@@ -58,6 +58,7 @@ public class MybatisXmlReload {
         return resultMapsField.get(targetConfiguration);
     }
 
+    @SuppressWarnings("unchecked")
     public void xmlReload() throws IOException {
         PathMatchingResourcePatternResolver patternResolver = new PathMatchingResourcePatternResolver();
         String CLASS_PATH_TARGET = File.separator + "target" + File.separator + "classes";

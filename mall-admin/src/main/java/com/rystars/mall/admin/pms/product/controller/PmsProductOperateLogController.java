@@ -25,14 +25,14 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/pms/product/operate/log")
-@Tag(name = "PmsProductOperateLogController", description = "")
+@Tag(name = "PmsProductOperateLogController", description = "pms_product_operate_log")
 public class PmsProductOperateLogController {
 
     private final PmsProductOperateLogService pmsProductOperateLogService;
 
     @Operation(summary = "新增")
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public Result<PmsProductOperateLog> save(@Parameter(name = "", required = true)
+    public Result<PmsProductOperateLog> save(@Parameter(name = "pms_product_operate_log", required = true)
                                              @RequestBody PmsProductOperateLog pmsProductOperateLog) {
         return Result.instance(pmsProductOperateLogService.save(pmsProductOperateLog));
     }
