@@ -43,4 +43,12 @@ public class SpringDocConfig {
                 .build();
     }
 
+    @Bean
+    public GroupedOpenApi omsApi() {
+        return GroupedOpenApi.builder()
+                .group("oms")
+                .pathsToMatch("/oms/**")
+                .build();
+    }
+
 }

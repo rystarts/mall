@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductAttributeCategoryMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductAttributeCategory">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="attributeCount" column="attribute_count" jdbcType="INTEGER"/>
+            <result property="paramCount" column="param_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,name,attribute_count,
+        param_count
+    </sql>
+
+</mapper>

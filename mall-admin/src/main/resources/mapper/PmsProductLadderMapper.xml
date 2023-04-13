@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductLadderMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductLadder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="count" column="count" jdbcType="INTEGER"/>
+            <result property="discount" column="discount" jdbcType="DECIMAL"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,product_id,count,
+        discount,price
+    </sql>
+
+</mapper>

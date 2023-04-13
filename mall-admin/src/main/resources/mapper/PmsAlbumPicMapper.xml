@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.pms.album.mapper.PmsAlbumPicMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.album.bean.PmsAlbumPic">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="albumId" column="album_id" jdbcType="BIGINT"/>
+            <result property="pic" column="pic" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,album_id,pic
+    </sql>
+
+</mapper>
