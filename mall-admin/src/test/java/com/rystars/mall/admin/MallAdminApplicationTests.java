@@ -1,27 +1,27 @@
 package com.rystars.mall.admin;
 
-import com.alibaba.druid.pool.DruidDataSource;
+import com.rystars.mall.admin.urils.redis.RedisHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.sql.DataSource;
 
+@Slf4j
 @SpringBootTest
 class MallAdminApplicationTests {
-
-    private final Logger logger = LoggerFactory.getLogger(MallAdminApplicationTests.class);
 
     @Autowired
     private DataSource dataSource;
 
+    @Autowired
+    private RedisHelper redisHelper;
+
     @Test
     public void test1() {
-        if (dataSource instanceof DruidDataSource) {
-            logger.info(dataSource.getClass().getName());
-        }
+        log.info((String) redisHelper.get("rrr"));
+        System.out.println(redisHelper.get("rrr"));
     }
 
 }
