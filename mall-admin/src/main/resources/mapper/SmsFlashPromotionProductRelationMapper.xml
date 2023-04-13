@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.sms.flash.mapper.SmsFlashPromotionProductRelationMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.flash.bean.SmsFlashPromotionProductRelation">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="flashPromotionId" column="flash_promotion_id" jdbcType="BIGINT"/>
+            <result property="flashPromotionSessionId" column="flash_promotion_session_id" jdbcType="BIGINT"/>
+            <result property="productId" column="product_id" jdbcType="BIGINT"/>
+            <result property="flashPromotionPrice" column="flash_promotion_price" jdbcType="DECIMAL"/>
+            <result property="flashPromotionCount" column="flash_promotion_count" jdbcType="INTEGER"/>
+            <result property="flashPromotionLimit" column="flash_promotion_limit" jdbcType="INTEGER"/>
+            <result property="sort" column="sort" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,flash_promotion_id,flash_promotion_session_id,
+        product_id,flash_promotion_price,flash_promotion_count,
+        flash_promotion_limit,sort
+    </sql>
+
+</mapper>
