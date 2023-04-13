@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
+ * 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】Controller
  * @author rystars
  * @date ${.now?string('yyyy-MM-dd HH:mm:ss')}
- * @description 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】Controller
  */
 @Slf4j
 @RestController

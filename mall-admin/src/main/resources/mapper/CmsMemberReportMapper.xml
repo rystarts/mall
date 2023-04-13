@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.cms.member.mapper.CmsMemberReportMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.member.bean.CmsMemberReport">
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="reportType" column="report_type" jdbcType="INTEGER"/>
+            <result property="reportMemberName" column="report_member_name" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="reportObject" column="report_object" jdbcType="VARCHAR"/>
+            <result property="reportStatus" column="report_status" jdbcType="INTEGER"/>
+            <result property="handleStatus" column="handle_status" jdbcType="INTEGER"/>
+            <result property="note" column="note" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,report_type,report_member_name,
+        create_time,report_object,report_status,
+        handle_status,note
+    </sql>
+
+</mapper>

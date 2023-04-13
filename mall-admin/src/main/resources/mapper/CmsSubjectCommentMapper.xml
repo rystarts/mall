@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.cms.subject.mapper.CmsSubjectCommentMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.subject.bean.CmsSubjectComment">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="subjectId" column="subject_id" jdbcType="BIGINT"/>
+            <result property="memberNickName" column="member_nick_name" jdbcType="VARCHAR"/>
+            <result property="memberIcon" column="member_icon" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,subject_id,member_nick_name,
+        member_icon,content,create_time,
+        show_status
+    </sql>
+
+</mapper>

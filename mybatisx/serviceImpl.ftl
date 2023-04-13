@@ -17,10 +17,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
+ * 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】ServiceImpl
  * @author rystars
  * @date ${.now?string('yyyy-MM-dd HH:mm:ss')}
- * @description 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】ServiceImpl
- *
  */
 @Slf4j
 @Service

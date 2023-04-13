@@ -11,9 +11,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import com.rystars.mall.admin.frame.base.bean.BaseBean;
 
 /**
+ * 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】Bean
  * @author rystars
  * @date ${.now?string('yyyy-MM-dd HH:mm:ss')}
- * @description 【${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>】Bean
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
