@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.ums.integration.mapper.UmsIntegrationConsumeSettingMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.integration.bean.UmsIntegrationConsumeSetting">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="deductionPerAmount" column="deduction_per_amount" jdbcType="INTEGER"/>
+            <result property="maxPercentPerOrder" column="max_percent_per_order" jdbcType="INTEGER"/>
+            <result property="useUnit" column="use_unit" jdbcType="INTEGER"/>
+            <result property="couponStatus" column="coupon_status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,deduction_per_amount,max_percent_per_order,
+        use_unit,coupon_status
+    </sql>
+
+</mapper>

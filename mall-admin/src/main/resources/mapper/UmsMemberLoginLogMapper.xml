@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.ums.member.mapper.UmsMemberLoginLogMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.member.bean.UmsMemberLoginLog">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="memberId" column="member_id" jdbcType="BIGINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="ip" column="ip" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="loginType" column="login_type" jdbcType="INTEGER"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,member_id,create_time,
+        ip,city,login_type,
+        province
+    </sql>
+
+</mapper>

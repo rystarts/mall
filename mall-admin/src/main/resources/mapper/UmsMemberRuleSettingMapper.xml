@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rystars.mall.admin.ums.member.mapper.UmsMemberRuleSettingMapper">
+
+    <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.member.bean.UmsMemberRuleSetting">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="continueSignDay" column="continue_sign_day" jdbcType="INTEGER"/>
+            <result property="continueSignPoint" column="continue_sign_point" jdbcType="INTEGER"/>
+            <result property="consumePerPoint" column="consume_per_point" jdbcType="DECIMAL"/>
+            <result property="lowOrderAmount" column="low_order_amount" jdbcType="DECIMAL"/>
+            <result property="maxPointPerOrder" column="max_point_per_order" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        id,continue_sign_day,continue_sign_point,
+        consume_per_point,low_order_amount,max_point_per_order,
+        type
+    </sql>
+
+</mapper>

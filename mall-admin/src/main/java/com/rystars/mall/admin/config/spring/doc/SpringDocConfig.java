@@ -51,4 +51,20 @@ public class SpringDocConfig {
                 .build();
     }
 
+    @Bean
+    public GroupedOpenApi smsApi() {
+        return GroupedOpenApi.builder()
+                .group("sms")
+                .pathsToMatch("/sms/**")
+                .build();
+    }
+
+    @Bean
+    public GroupedOpenApi umsApi() {
+        return GroupedOpenApi.builder()
+                .group("ums")
+                .pathsToMatch("/ums/**")
+                .build();
+    }
+
 }
