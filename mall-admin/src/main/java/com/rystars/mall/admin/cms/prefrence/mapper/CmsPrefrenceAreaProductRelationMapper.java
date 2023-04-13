@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 【cms_prefrence_area_product_relation(优选专区和产品关系表)】Mapper
+ *
  * @author rystars
  * @date 2023-04-13 10:38:54
  */

@@ -5,10 +5,10 @@
 <mapper namespace="com.rystars.mall.admin.ums.member.mapper.UmsMemberTagMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.member.bean.UmsMemberTag">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="finishOrderCount" column="finish_order_count" jdbcType="INTEGER"/>
-            <result property="finishOrderAmount" column="finish_order_amount" jdbcType="DECIMAL"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="finishOrderCount" column="finish_order_count" jdbcType="INTEGER"/>
+        <result property="finishOrderAmount" column="finish_order_amount" jdbcType="DECIMAL"/>
     </resultMap>
 
     <sql id="baseColumn">

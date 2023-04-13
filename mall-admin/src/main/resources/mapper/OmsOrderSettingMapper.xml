@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.oms.order.mapper.OmsOrderSettingMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.oms.order.bean.OmsOrderSetting">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="flashOrderOvertime" column="flash_order_overtime" jdbcType="INTEGER"/>
-            <result property="normalOrderOvertime" column="normal_order_overtime" jdbcType="INTEGER"/>
-            <result property="confirmOvertime" column="confirm_overtime" jdbcType="INTEGER"/>
-            <result property="finishOvertime" column="finish_overtime" jdbcType="INTEGER"/>
-            <result property="commentOvertime" column="comment_overtime" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="flashOrderOvertime" column="flash_order_overtime" jdbcType="INTEGER"/>
+        <result property="normalOrderOvertime" column="normal_order_overtime" jdbcType="INTEGER"/>
+        <result property="confirmOvertime" column="confirm_overtime" jdbcType="INTEGER"/>
+        <result property="finishOvertime" column="finish_overtime" jdbcType="INTEGER"/>
+        <result property="commentOvertime" column="comment_overtime" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

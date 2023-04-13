@@ -5,16 +5,16 @@
 <mapper namespace="com.rystars.mall.admin.ums.member.mapper.UmsMemberReceiveAddressMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.member.bean.UmsMemberReceiveAddress">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="memberId" column="member_id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
-            <result property="defaultStatus" column="default_status" jdbcType="INTEGER"/>
-            <result property="postCode" column="post_code" jdbcType="VARCHAR"/>
-            <result property="province" column="province" jdbcType="VARCHAR"/>
-            <result property="city" column="city" jdbcType="VARCHAR"/>
-            <result property="region" column="region" jdbcType="VARCHAR"/>
-            <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="memberId" column="member_id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+        <result property="defaultStatus" column="default_status" jdbcType="INTEGER"/>
+        <result property="postCode" column="post_code" jdbcType="VARCHAR"/>
+        <result property="province" column="province" jdbcType="VARCHAR"/>
+        <result property="city" column="city" jdbcType="VARCHAR"/>
+        <result property="region" column="region" jdbcType="VARCHAR"/>
+        <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

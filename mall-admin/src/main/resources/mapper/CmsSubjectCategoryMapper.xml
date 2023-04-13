@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.cms.subject.mapper.CmsSubjectCategoryMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.subject.bean.CmsSubjectCategory">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="icon" column="icon" jdbcType="VARCHAR"/>
-            <result property="subjectCount" column="subject_count" jdbcType="INTEGER"/>
-            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="subjectCount" column="subject_count" jdbcType="INTEGER"/>
+        <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

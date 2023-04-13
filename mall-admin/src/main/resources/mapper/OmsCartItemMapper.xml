@@ -5,24 +5,24 @@
 <mapper namespace="com.rystars.mall.admin.oms.cart.mapper.OmsCartItemMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.oms.cart.bean.OmsCartItem">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="productSkuId" column="product_sku_id" jdbcType="BIGINT"/>
-            <result property="memberId" column="member_id" jdbcType="BIGINT"/>
-            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
-            <result property="price" column="price" jdbcType="DECIMAL"/>
-            <result property="productPic" column="product_pic" jdbcType="VARCHAR"/>
-            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
-            <result property="productSubTitle" column="product_sub_title" jdbcType="VARCHAR"/>
-            <result property="productSkuCode" column="product_sku_code" jdbcType="VARCHAR"/>
-            <result property="memberNickname" column="member_nickname" jdbcType="VARCHAR"/>
-            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
-            <result property="modifyDate" column="modify_date" jdbcType="TIMESTAMP"/>
-            <result property="deleteStatus" column="delete_status" jdbcType="INTEGER"/>
-            <result property="productCategoryId" column="product_category_id" jdbcType="BIGINT"/>
-            <result property="productBrand" column="product_brand" jdbcType="VARCHAR"/>
-            <result property="productSn" column="product_sn" jdbcType="VARCHAR"/>
-            <result property="productAttr" column="product_attr" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="productSkuId" column="product_sku_id" jdbcType="BIGINT"/>
+        <result property="memberId" column="member_id" jdbcType="BIGINT"/>
+        <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+        <result property="price" column="price" jdbcType="DECIMAL"/>
+        <result property="productPic" column="product_pic" jdbcType="VARCHAR"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productSubTitle" column="product_sub_title" jdbcType="VARCHAR"/>
+        <result property="productSkuCode" column="product_sku_code" jdbcType="VARCHAR"/>
+        <result property="memberNickname" column="member_nickname" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="modifyDate" column="modify_date" jdbcType="TIMESTAMP"/>
+        <result property="deleteStatus" column="delete_status" jdbcType="INTEGER"/>
+        <result property="productCategoryId" column="product_category_id" jdbcType="BIGINT"/>
+        <result property="productBrand" column="product_brand" jdbcType="VARCHAR"/>
+        <result property="productSn" column="product_sn" jdbcType="VARCHAR"/>
+        <result property="productAttr" column="product_attr" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,11 +5,11 @@
 <mapper namespace="com.rystars.mall.admin.cms.prefrence.mapper.CmsPrefrenceAreaMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.prefrence.bean.CmsPrefrenceArea">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="subTitle" column="sub_title" jdbcType="VARCHAR"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
-            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="subTitle" column="sub_title" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

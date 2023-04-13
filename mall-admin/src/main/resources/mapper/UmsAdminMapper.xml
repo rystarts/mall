@@ -5,16 +5,16 @@
 <mapper namespace="com.rystars.mall.admin.ums.admin.mapper.UmsAdminMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.admin.bean.UmsAdmin">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="username" column="username" jdbcType="VARCHAR"/>
-            <result property="password" column="password" jdbcType="VARCHAR"/>
-            <result property="icon" column="icon" jdbcType="VARCHAR"/>
-            <result property="email" column="email" jdbcType="VARCHAR"/>
-            <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
-            <result property="note" column="note" jdbcType="VARCHAR"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="loginTime" column="login_time" jdbcType="TIMESTAMP"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="loginTime" column="login_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

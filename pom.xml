@@ -1,154 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<!-- springboot项目 -->
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- springboot项目 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-	<!-- 定义父模块的坐标 子模块继承它 -->
-	<groupId>com.rystars.mall</groupId>
-	<artifactId>mall</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>mall</name>
-	<description>mall project</description>
-	<!-- 父项目为pom pom文件只做整合子模块项目使用 -->
-	<packaging>pom</packaging>
+    <!-- 定义父模块的坐标 子模块继承它 -->
+    <groupId>com.rystars.mall</groupId>
+    <artifactId>mall</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>mall</name>
+    <description>mall project</description>
+    <!-- 父项目为pom pom文件只做整合子模块项目使用 -->
+    <packaging>pom</packaging>
 
-	<!-- 定义子模块 -->
-	<modules>
-		<module>mall-admin</module>
-	</modules>
+    <!-- 定义子模块 -->
+    <modules>
+        <module>mall-admin</module>
+    </modules>
 
-	<!-- 配置依赖的版本号 -->
-	<properties>
-		<java.version>17</java.version>
-		<snakeyaml.version>2.0</snakeyaml.version>
-		<lombok.version>1.18.24</lombok.version>
-		<mybatis-spring-boot-starter.version>3.0.1</mybatis-spring-boot-starter.version>
-		<mysql-connector-j.version>8.0.32</mysql-connector-j.version>
-		<pagehelper-spring-boot-starter.version>1.4.6</pagehelper-spring-boot-starter.version>
-		<directory-watcher.version>0.18.0</directory-watcher.version>
-		<springdoc-openapi-starter-webmvc-ui.version>2.1.0</springdoc-openapi-starter-webmvc-ui.version>
-		<jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
-		<druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
-		<mybatis-plus-boot-starter.version>3.5.3.1</mybatis-plus-boot-starter.version>
-	</properties>
+    <!-- 配置依赖的版本号 -->
+    <properties>
+        <java.version>17</java.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <lombok.version>1.18.24</lombok.version>
+        <mybatis-spring-boot-starter.version>3.0.1</mybatis-spring-boot-starter.version>
+        <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
+        <pagehelper-spring-boot-starter.version>1.4.6</pagehelper-spring-boot-starter.version>
+        <directory-watcher.version>0.18.0</directory-watcher.version>
+        <springdoc-openapi-starter-webmvc-ui.version>2.1.0</springdoc-openapi-starter-webmvc-ui.version>
+        <jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
+        <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
+        <mybatis-plus-boot-starter.version>3.5.3.1</mybatis-plus-boot-starter.version>
+    </properties>
 
-	<!--
-	 	此处注意
-	 	dependencies 引入依赖，所需要的依赖项子项目不用引入 直接使用，子项目如果想要改变版本号 覆盖依赖即可
-	 	dependencyManagement 只声明不引用，作为版本管理用，子项目引入依赖不写版本号默认为父项目的版本
-	 -->
-	<dependencies>
-		<!-- web启动器 包含SpringMvc的大量配置 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- 查看父级相关依赖发现 yaml 依赖版本为1.33 存在漏洞  升级为2.0 -->
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<version>${snakeyaml.version}</version>
-		</dependency>
-		<!-- 单元测试组件 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- lombok 简化get set -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-		</dependency>
-	</dependencies>
+    <!--
+         此处注意
+         dependencies 引入依赖，所需要的依赖项子项目不用引入 直接使用，子项目如果想要改变版本号 覆盖依赖即可
+         dependencyManagement 只声明不引用，作为版本管理用，子项目引入依赖不写版本号默认为父项目的版本
+     -->
+    <dependencies>
+        <!-- web启动器 包含SpringMvc的大量配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 查看父级相关依赖发现 yaml 依赖版本为1.33 存在漏洞  升级为2.0 -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+        <!-- 单元测试组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- lombok 简化get set -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
-	<!-- 用来管理版本 需要每个子项目单独引入 -->
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-				<version>${mybatis-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.mysql</groupId>
-				<artifactId>mysql-connector-j</artifactId>
-				<version>${mysql-connector-j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.pagehelper</groupId>
-				<artifactId>pagehelper-spring-boot-starter</artifactId>
-				<version>${pagehelper-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.methvin</groupId>
-				<artifactId>directory-watcher</artifactId>
-				<version>${directory-watcher.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springdoc</groupId>
-				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-				<version>${springdoc-openapi-starter-webmvc-ui.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.ulisesbocchio</groupId>
-				<artifactId>jasypt-spring-boot-starter</artifactId>
-				<version>${jasypt-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid-spring-boot-starter</artifactId>
-				<version>${druid-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.baomidou</groupId>
-				<artifactId>mybatis-plus-boot-starter</artifactId>
-				<version>${mybatis-plus-boot-starter.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <!-- 用来管理版本 需要每个子项目单独引入 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.methvin</groupId>
+                <artifactId>directory-watcher</artifactId>
+                <version>${directory-watcher.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<build>
-		<!-- 手动配置构建项目加载静态资源 -->
-		<resources>
-			<resource>
-				<directory>src/main/java</directory>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.xls</include>
-					<include>**/*.xlsx</include>
-					<include>**/*.doc</include>
-					<include>**/*.docx</include>
-					<include>**/*.ppt</include>
-					<include>**/*.pptx</include>
-					<include>**/*.ftl</include>
-					<include>**/*.properties</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/**</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<!-- 打包插件 mvn package 打成jar -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <!-- 手动配置构建项目加载静态资源 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.xls</include>
+                    <include>**/*.xlsx</include>
+                    <include>**/*.doc</include>
+                    <include>**/*.docx</include>
+                    <include>**/*.ppt</include>
+                    <include>**/*.pptx</include>
+                    <include>**/*.ftl</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <!-- 打包插件 mvn package 打成jar -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

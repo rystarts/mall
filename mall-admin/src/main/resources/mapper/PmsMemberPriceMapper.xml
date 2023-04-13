@@ -5,11 +5,11 @@
 <mapper namespace="com.rystars.mall.admin.pms.member.mapper.PmsMemberPriceMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.member.bean.PmsMemberPrice">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="memberLevelId" column="member_level_id" jdbcType="BIGINT"/>
-            <result property="memberPrice" column="member_price" jdbcType="DECIMAL"/>
-            <result property="memberLevelName" column="member_level_name" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="memberLevelId" column="member_level_id" jdbcType="BIGINT"/>
+        <result property="memberPrice" column="member_price" jdbcType="DECIMAL"/>
+        <result property="memberLevelName" column="member_level_name" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

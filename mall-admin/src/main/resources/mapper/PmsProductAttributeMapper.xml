@@ -5,18 +5,18 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductAttributeMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductAttribute">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productAttributeCategoryId" column="product_attribute_category_id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="selectType" column="select_type" jdbcType="INTEGER"/>
-            <result property="inputType" column="input_type" jdbcType="INTEGER"/>
-            <result property="inputList" column="input_list" jdbcType="VARCHAR"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
-            <result property="filterType" column="filter_type" jdbcType="INTEGER"/>
-            <result property="searchType" column="search_type" jdbcType="INTEGER"/>
-            <result property="relatedStatus" column="related_status" jdbcType="INTEGER"/>
-            <result property="handAddStatus" column="hand_add_status" jdbcType="INTEGER"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productAttributeCategoryId" column="product_attribute_category_id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="selectType" column="select_type" jdbcType="INTEGER"/>
+        <result property="inputType" column="input_type" jdbcType="INTEGER"/>
+        <result property="inputList" column="input_list" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="filterType" column="filter_type" jdbcType="INTEGER"/>
+        <result property="searchType" column="search_type" jdbcType="INTEGER"/>
+        <result property="relatedStatus" column="related_status" jdbcType="INTEGER"/>
+        <result property="handAddStatus" column="hand_add_status" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

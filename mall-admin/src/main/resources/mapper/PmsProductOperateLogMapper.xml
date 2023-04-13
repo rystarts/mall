@@ -5,18 +5,18 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductOperateLogMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductOperateLog">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="priceOld" column="price_old" jdbcType="DECIMAL"/>
-            <result property="priceNew" column="price_new" jdbcType="DECIMAL"/>
-            <result property="salePriceOld" column="sale_price_old" jdbcType="DECIMAL"/>
-            <result property="salePriceNew" column="sale_price_new" jdbcType="DECIMAL"/>
-            <result property="giftPointOld" column="gift_point_old" jdbcType="INTEGER"/>
-            <result property="giftPointNew" column="gift_point_new" jdbcType="INTEGER"/>
-            <result property="usePointLimitOld" column="use_point_limit_old" jdbcType="INTEGER"/>
-            <result property="usePointLimitNew" column="use_point_limit_new" jdbcType="INTEGER"/>
-            <result property="operateMan" column="operate_man" jdbcType="VARCHAR"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="priceOld" column="price_old" jdbcType="DECIMAL"/>
+        <result property="priceNew" column="price_new" jdbcType="DECIMAL"/>
+        <result property="salePriceOld" column="sale_price_old" jdbcType="DECIMAL"/>
+        <result property="salePriceNew" column="sale_price_new" jdbcType="DECIMAL"/>
+        <result property="giftPointOld" column="gift_point_old" jdbcType="INTEGER"/>
+        <result property="giftPointNew" column="gift_point_new" jdbcType="INTEGER"/>
+        <result property="usePointLimitOld" column="use_point_limit_old" jdbcType="INTEGER"/>
+        <result property="usePointLimitNew" column="use_point_limit_new" jdbcType="INTEGER"/>
+        <result property="operateMan" column="operate_man" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="baseColumn">

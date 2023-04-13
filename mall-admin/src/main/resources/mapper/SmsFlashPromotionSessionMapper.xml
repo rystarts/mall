@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.sms.flash.mapper.SmsFlashPromotionSessionMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.flash.bean.SmsFlashPromotionSession">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="startTime" column="start_time" jdbcType="TIME"/>
-            <result property="endTime" column="end_time" jdbcType="TIME"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="startTime" column="start_time" jdbcType="TIME"/>
+        <result property="endTime" column="end_time" jdbcType="TIME"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,13 +5,13 @@
 <mapper namespace="com.rystars.mall.admin.ums.role.mapper.UmsRoleMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.role.bean.UmsRole">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="description" column="description" jdbcType="VARCHAR"/>
-            <result property="adminCount" column="admin_count" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="adminCount" column="admin_count" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

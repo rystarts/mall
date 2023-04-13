@@ -5,18 +5,18 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductCategoryMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductCategory">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="level" column="level" jdbcType="INTEGER"/>
-            <result property="productCount" column="product_count" jdbcType="INTEGER"/>
-            <result property="productUnit" column="product_unit" jdbcType="VARCHAR"/>
-            <result property="navStatus" column="nav_status" jdbcType="INTEGER"/>
-            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
-            <result property="icon" column="icon" jdbcType="VARCHAR"/>
-            <result property="keywords" column="keywords" jdbcType="VARCHAR"/>
-            <result property="description" column="description" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="level" column="level" jdbcType="INTEGER"/>
+        <result property="productCount" column="product_count" jdbcType="INTEGER"/>
+        <result property="productUnit" column="product_unit" jdbcType="VARCHAR"/>
+        <result property="navStatus" column="nav_status" jdbcType="INTEGER"/>
+        <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="keywords" column="keywords" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

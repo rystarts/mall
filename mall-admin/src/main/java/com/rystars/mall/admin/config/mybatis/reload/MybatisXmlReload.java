@@ -18,15 +18,12 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
 import java.util.stream.Stream;
-
-import static java.lang.annotation.ElementType.METHOD;
 
 /**
  * mybatis-xml-reload 核心xml热加载逻辑
@@ -42,6 +39,23 @@ public class MybatisXmlReload {
     public MybatisXmlReload(MybatisXmlReloadProperties prop, List<SqlSessionFactory> sqlSessionFactories) {
         this.prop = prop;
         this.sqlSessionFactories = sqlSessionFactories;
+    }
+
+    /**
+     * 根据反射获取Configuration对象中属性
+     *
+     * @param targetConfiguration targetConfiguration
+     * @param aClass              aClass
+     * @param filed               filed
+     * @return return
+     * @throws NoSuchFieldException   NoSuchFieldException
+     * @throws IllegalAccessException IllegalAccessException
+     */
+    private static Object getFieldValue(Configuration targetConfiguration, Class<?> aClass,
+                                        String filed) throws NoSuchFieldException, IllegalAccessException {
+        Field resultMapsField = aClass.getDeclaredField(filed);
+        resultMapsField.setAccessible(true);
+        return resultMapsField.get(targetConfiguration);
     }
 
     public void xmlReload() throws IOException {
@@ -159,21 +173,5 @@ public class MybatisXmlReload {
         } catch (IOException e) {
             return new Resource[0];
         }
-    }
-
-    /**
-     * 根据反射获取Configuration对象中属性
-     * @param targetConfiguration targetConfiguration
-     * @param aClass aClass
-     * @param filed filed
-     * @return return
-     * @throws NoSuchFieldException NoSuchFieldException
-     * @throws IllegalAccessException IllegalAccessException
-     */
-    private static Object getFieldValue(Configuration targetConfiguration, Class<?> aClass,
-                                        String filed) throws NoSuchFieldException, IllegalAccessException {
-        Field resultMapsField = aClass.getDeclaredField(filed);
-        resultMapsField.setAccessible(true);
-        return resultMapsField.get(targetConfiguration);
     }
 }

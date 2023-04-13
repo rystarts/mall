@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.oms.order.mapper.OmsOrderOperateHistoryMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.oms.order.bean.OmsOrderOperateHistory">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="orderId" column="order_id" jdbcType="BIGINT"/>
-            <result property="operateMan" column="operate_man" jdbcType="VARCHAR"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
-            <result property="note" column="note" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="orderId" column="order_id" jdbcType="BIGINT"/>
+        <result property="operateMan" column="operate_man" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="orderStatus" column="order_status" jdbcType="INTEGER"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

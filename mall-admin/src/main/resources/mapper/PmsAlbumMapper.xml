@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.pms.album.mapper.PmsAlbumMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.album.bean.PmsAlbum">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="coverPic" column="cover_pic" jdbcType="VARCHAR"/>
-            <result property="picCount" column="pic_count" jdbcType="INTEGER"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
-            <result property="description" column="description" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="coverPic" column="cover_pic" jdbcType="VARCHAR"/>
+        <result property="picCount" column="pic_count" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,18 +5,18 @@
 <mapper namespace="com.rystars.mall.admin.sms.home.mapper.SmsHomeAdvertiseMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.home.bean.SmsHomeAdvertise">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
-            <result property="pic" column="pic" jdbcType="VARCHAR"/>
-            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
-            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="clickCount" column="click_count" jdbcType="INTEGER"/>
-            <result property="orderCount" column="order_count" jdbcType="INTEGER"/>
-            <result property="url" column="url" jdbcType="VARCHAR"/>
-            <result property="note" column="note" jdbcType="VARCHAR"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="pic" column="pic" jdbcType="VARCHAR"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+        <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="clickCount" column="click_count" jdbcType="INTEGER"/>
+        <result property="orderCount" column="order_count" jdbcType="INTEGER"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

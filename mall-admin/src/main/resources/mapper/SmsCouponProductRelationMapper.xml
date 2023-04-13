@@ -5,11 +5,11 @@
 <mapper namespace="com.rystars.mall.admin.sms.coupon.mapper.SmsCouponProductRelationMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.coupon.bean.SmsCouponProductRelation">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="couponId" column="coupon_id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
-            <result property="productSn" column="product_sn" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="couponId" column="coupon_id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productSn" column="product_sn" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,14 +5,14 @@
 <mapper namespace="com.rystars.mall.admin.cms.help.mapper.CmsHelpMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.help.bean.CmsHelp">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
-            <result property="icon" column="icon" jdbcType="VARCHAR"/>
-            <result property="title" column="title" jdbcType="VARCHAR"/>
-            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="readCount" column="read_count" jdbcType="INTEGER"/>
-            <result property="content" column="content" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="readCount" column="read_count" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

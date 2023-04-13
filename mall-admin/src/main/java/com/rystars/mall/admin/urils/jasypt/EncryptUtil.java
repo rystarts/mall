@@ -15,11 +15,10 @@ import java.util.Scanner;
  */
 public class EncryptUtil {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(EncryptUtil.class);
     // 读取盐值
     @Value("${jasypt.encryptor.password}")
     private static String password;
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(EncryptUtil.class);
 
     /**
      * 加密
@@ -40,6 +39,7 @@ public class EncryptUtil {
 
     /**
      * 解密
+     *
      * @param encryptedMessage 已被加密的字符串
      * @return 解密后的字符串
      */

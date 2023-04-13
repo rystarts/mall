@@ -5,24 +5,24 @@
 <mapper namespace="com.rystars.mall.admin.sms.coupon.mapper.SmsCouponMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.coupon.bean.SmsCoupon">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="platform" column="platform" jdbcType="INTEGER"/>
-            <result property="count" column="count" jdbcType="INTEGER"/>
-            <result property="amount" column="amount" jdbcType="DECIMAL"/>
-            <result property="perLimit" column="per_limit" jdbcType="INTEGER"/>
-            <result property="minPoint" column="min_point" jdbcType="DECIMAL"/>
-            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
-            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
-            <result property="useType" column="use_type" jdbcType="INTEGER"/>
-            <result property="note" column="note" jdbcType="VARCHAR"/>
-            <result property="publishCount" column="publish_count" jdbcType="INTEGER"/>
-            <result property="useCount" column="use_count" jdbcType="INTEGER"/>
-            <result property="receiveCount" column="receive_count" jdbcType="INTEGER"/>
-            <result property="enableTime" column="enable_time" jdbcType="TIMESTAMP"/>
-            <result property="code" column="code" jdbcType="VARCHAR"/>
-            <result property="memberLevel" column="member_level" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="platform" column="platform" jdbcType="INTEGER"/>
+        <result property="count" column="count" jdbcType="INTEGER"/>
+        <result property="amount" column="amount" jdbcType="DECIMAL"/>
+        <result property="perLimit" column="per_limit" jdbcType="INTEGER"/>
+        <result property="minPoint" column="min_point" jdbcType="DECIMAL"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+        <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+        <result property="useType" column="use_type" jdbcType="INTEGER"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="publishCount" column="publish_count" jdbcType="INTEGER"/>
+        <result property="useCount" column="use_count" jdbcType="INTEGER"/>
+        <result property="receiveCount" column="receive_count" jdbcType="INTEGER"/>
+        <result property="enableTime" column="enable_time" jdbcType="TIMESTAMP"/>
+        <result property="code" column="code" jdbcType="VARCHAR"/>
+        <result property="memberLevel" column="member_level" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

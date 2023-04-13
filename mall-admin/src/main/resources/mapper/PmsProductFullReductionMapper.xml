@@ -5,10 +5,10 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductFullReductionMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductFullReduction">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="fullPrice" column="full_price" jdbcType="DECIMAL"/>
-            <result property="reducePrice" column="reduce_price" jdbcType="DECIMAL"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="fullPrice" column="full_price" jdbcType="DECIMAL"/>
+        <result property="reducePrice" column="reduce_price" jdbcType="DECIMAL"/>
     </resultMap>
 
     <sql id="baseColumn">

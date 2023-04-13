@@ -5,12 +5,12 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductVertifyRecordMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductVertifyRecord">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="vertifyMan" column="vertify_man" jdbcType="VARCHAR"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="detail" column="detail" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="vertifyMan" column="vertify_man" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="detail" column="detail" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

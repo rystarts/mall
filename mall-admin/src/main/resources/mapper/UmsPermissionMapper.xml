@@ -5,16 +5,16 @@
 <mapper namespace="com.rystars.mall.admin.ums.permission.mapper.UmsPermissionMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.permission.bean.UmsPermission">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="pid" column="pid" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="value" column="value" jdbcType="VARCHAR"/>
-            <result property="icon" column="icon" jdbcType="VARCHAR"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
-            <result property="uri" column="uri" jdbcType="VARCHAR"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="pid" column="pid" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="value" column="value" jdbcType="VARCHAR"/>
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="uri" column="uri" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -6,7 +6,7 @@ server:
 spring:
   profiles:
     active: dev
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---数据源--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---数据源--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   datasource:
     #定义数据源 使用阿里的Druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
@@ -69,17 +69,17 @@ spring:
         login-username: RYSTARS(WptxGMlH7Af5o2Uj6+qx/w==)
         # 登录密码
         login-password: RYSTARS(0HYbnoWkN6RE4Ap98eu72zPrgcHLbJUm)
-#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---数据源---<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---数据源---<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---mybatis--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#mybatis配置  更换为mybatis-plus的配置了
-#mybatis:
-  #配置扫描xml路径
-  #mapper-locations: classpath*:mapper/**/*Mapper.xml
-  #配置类型别名
-  #type-aliases-package: com.rystars.mall.admin.**.bean
-  #打印执行SQL
-  #configuration:
+    #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---mybatis--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    #mybatis配置  更换为mybatis-plus的配置了
+    #mybatis:
+    #配置扫描xml路径
+    #mapper-locations: classpath*:mapper/**/*Mapper.xml
+    #配置类型别名
+    #type-aliases-package: com.rystars.mall.admin.**.bean
+    #打印执行SQL
+    #configuration:
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 mybatis-plus:
   #配置扫描xml路径
@@ -89,8 +89,8 @@ mybatis-plus:
   #打印执行SQL
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#分页插件配置 改用mybatis plus的分页
-#page helper:
+  #分页插件配置 改用mybatis plus的分页
+  #page helper:
   #配置使用的方言 不配置会自动检测
   #helper-dialect: mysql
   #使用参数合理化 如果传入错误的 开始 结束页数,会返回第一页或最后一页，false返回空。
@@ -129,7 +129,7 @@ jasypt:
     property:
       prefix: RYSTARS(
       suffix: )
-#    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
+    #    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
     #加密口令
 #    方式一：直接作为程序启动时的命令行参数来带入 java -jar project.jar --jasypt.encryptor.password=xxx
 #    方式二：直接作为程序启动时的应用环境变量来带入VM java -Djasypt.encryptor.password=xxx -jar project.jar

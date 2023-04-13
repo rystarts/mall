@@ -5,22 +5,22 @@
 <mapper namespace="com.rystars.mall.admin.ums.member.mapper.UmsMemberStatisticsInfoMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.ums.member.bean.UmsMemberStatisticsInfo">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="memberId" column="member_id" jdbcType="BIGINT"/>
-            <result property="consumeAmount" column="consume_amount" jdbcType="DECIMAL"/>
-            <result property="orderCount" column="order_count" jdbcType="INTEGER"/>
-            <result property="couponCount" column="coupon_count" jdbcType="INTEGER"/>
-            <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
-            <result property="returnOrderCount" column="return_order_count" jdbcType="INTEGER"/>
-            <result property="loginCount" column="login_count" jdbcType="INTEGER"/>
-            <result property="attendCount" column="attend_count" jdbcType="INTEGER"/>
-            <result property="fansCount" column="fans_count" jdbcType="INTEGER"/>
-            <result property="collectProductCount" column="collect_product_count" jdbcType="INTEGER"/>
-            <result property="collectSubjectCount" column="collect_subject_count" jdbcType="INTEGER"/>
-            <result property="collectTopicCount" column="collect_topic_count" jdbcType="INTEGER"/>
-            <result property="collectCommentCount" column="collect_comment_count" jdbcType="INTEGER"/>
-            <result property="inviteFriendCount" column="invite_friend_count" jdbcType="INTEGER"/>
-            <result property="recentOrderTime" column="recent_order_time" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="memberId" column="member_id" jdbcType="BIGINT"/>
+        <result property="consumeAmount" column="consume_amount" jdbcType="DECIMAL"/>
+        <result property="orderCount" column="order_count" jdbcType="INTEGER"/>
+        <result property="couponCount" column="coupon_count" jdbcType="INTEGER"/>
+        <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
+        <result property="returnOrderCount" column="return_order_count" jdbcType="INTEGER"/>
+        <result property="loginCount" column="login_count" jdbcType="INTEGER"/>
+        <result property="attendCount" column="attend_count" jdbcType="INTEGER"/>
+        <result property="fansCount" column="fans_count" jdbcType="INTEGER"/>
+        <result property="collectProductCount" column="collect_product_count" jdbcType="INTEGER"/>
+        <result property="collectSubjectCount" column="collect_subject_count" jdbcType="INTEGER"/>
+        <result property="collectTopicCount" column="collect_topic_count" jdbcType="INTEGER"/>
+        <result property="collectCommentCount" column="collect_comment_count" jdbcType="INTEGER"/>
+        <result property="inviteFriendCount" column="invite_friend_count" jdbcType="INTEGER"/>
+        <result property="recentOrderTime" column="recent_order_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,22 +5,22 @@
 <mapper namespace="com.rystars.mall.admin.cms.subject.mapper.CmsSubjectMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.subject.bean.CmsSubject">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
-            <result property="title" column="title" jdbcType="VARCHAR"/>
-            <result property="pic" column="pic" jdbcType="VARCHAR"/>
-            <result property="productCount" column="product_count" jdbcType="INTEGER"/>
-            <result property="recommendStatus" column="recommend_status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="collectCount" column="collect_count" jdbcType="INTEGER"/>
-            <result property="readCount" column="read_count" jdbcType="INTEGER"/>
-            <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
-            <result property="albumPics" column="album_pics" jdbcType="VARCHAR"/>
-            <result property="description" column="description" jdbcType="VARCHAR"/>
-            <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
-            <result property="content" column="content" jdbcType="VARCHAR"/>
-            <result property="forwardCount" column="forward_count" jdbcType="INTEGER"/>
-            <result property="categoryName" column="category_name" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="pic" column="pic" jdbcType="VARCHAR"/>
+        <result property="productCount" column="product_count" jdbcType="INTEGER"/>
+        <result property="recommendStatus" column="recommend_status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="collectCount" column="collect_count" jdbcType="INTEGER"/>
+        <result property="readCount" column="read_count" jdbcType="INTEGER"/>
+        <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
+        <result property="albumPics" column="album_pics" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="showStatus" column="show_status" jdbcType="INTEGER"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="forwardCount" column="forward_count" jdbcType="INTEGER"/>
+        <result property="categoryName" column="category_name" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

@@ -5,10 +5,10 @@
 <mapper namespace="com.rystars.mall.admin.pms.product.mapper.PmsProductAttributeValueMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.pms.product.bean.PmsProductAttributeValue">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="productId" column="product_id" jdbcType="BIGINT"/>
-            <result property="productAttributeId" column="product_attribute_id" jdbcType="BIGINT"/>
-            <result property="value" column="value" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="productId" column="product_id" jdbcType="BIGINT"/>
+        <result property="productAttributeId" column="product_attribute_id" jdbcType="BIGINT"/>
+        <result property="value" column="value" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

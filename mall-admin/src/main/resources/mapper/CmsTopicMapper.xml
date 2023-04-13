@@ -5,18 +5,18 @@
 <mapper namespace="com.rystars.mall.admin.cms.topic.mapper.CmsTopicMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.cms.topic.bean.CmsTopic">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
-            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
-            <result property="attendCount" column="attend_count" jdbcType="INTEGER"/>
-            <result property="attentionCount" column="attention_count" jdbcType="INTEGER"/>
-            <result property="readCount" column="read_count" jdbcType="INTEGER"/>
-            <result property="awardName" column="award_name" jdbcType="VARCHAR"/>
-            <result property="attendType" column="attend_type" jdbcType="VARCHAR"/>
-            <result property="content" column="content" jdbcType="VARCHAR"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+        <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+        <result property="attendCount" column="attend_count" jdbcType="INTEGER"/>
+        <result property="attentionCount" column="attention_count" jdbcType="INTEGER"/>
+        <result property="readCount" column="read_count" jdbcType="INTEGER"/>
+        <result property="awardName" column="award_name" jdbcType="VARCHAR"/>
+        <result property="attendType" column="attend_type" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="baseColumn">

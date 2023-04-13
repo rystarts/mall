@@ -30,6 +30,11 @@ public enum ResultEnum implements IResult {
 
     private String message;
 
+    ResultEnum(Integer code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
     @Override
     public Integer getCode() {
         return code;
@@ -45,11 +50,6 @@ public enum ResultEnum implements IResult {
     }
 
     public void setMessage(String message) {
-        this.message = message;
-    }
-
-    ResultEnum(Integer code, String message) {
-        this.code = code;
         this.message = message;
     }
 }

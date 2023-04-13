@@ -5,11 +5,11 @@
 <mapper namespace="com.rystars.mall.admin.sms.home.mapper.SmsHomeBrandMapper">
 
     <resultMap id="baseResultMap" type="com.rystars.mall.admin.sms.home.bean.SmsHomeBrand">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="brandId" column="brand_id" jdbcType="BIGINT"/>
-            <result property="brandName" column="brand_name" jdbcType="VARCHAR"/>
-            <result property="recommendStatus" column="recommend_status" jdbcType="INTEGER"/>
-            <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="brandId" column="brand_id" jdbcType="BIGINT"/>
+        <result property="brandName" column="brand_name" jdbcType="VARCHAR"/>
+        <result property="recommendStatus" column="recommend_status" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="baseColumn">
