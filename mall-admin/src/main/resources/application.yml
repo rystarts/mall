@@ -6,6 +6,8 @@ server:
 spring:
   profiles:
     active: dev
+  main:
+    log-startup-info: false
   #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---数据源--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   datasource:
     #定义数据源 使用阿里的Druid连接池
@@ -88,7 +90,10 @@ mybatis-plus:
   type-aliases-package: com.rystars.mall.admin.**.bean
   #打印执行SQL
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  #关闭启动banner
+  global-config:
+    banner: false
   #分页插件配置 改用mybatis plus的分页
   #page helper:
   #配置使用的方言 不配置会自动检测
@@ -135,3 +140,14 @@ jasypt:
 #    方式二：直接作为程序启动时的应用环境变量来带入VM java -Djasypt.encryptor.password=xxx -jar project.jar
 #    方式三：甚至可以作为系统环境变量的方式来带入 jasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD:}
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---jasypt---<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---log--->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#配置日志
+logging:
+  #日志等级
+  level:
+    root: info
+    com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean: warn
+    com.ulisesbocchio.jasyptspringboot: warn
+    org.springframework.test: error
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---log---<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
