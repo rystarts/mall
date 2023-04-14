@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【pms_album(相册表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:49:58
+ * @date 2023-04-14 17:10:51
  */
 @Mapper
 public interface PmsAlbumMapper extends IBaseMapper<PmsAlbum> {

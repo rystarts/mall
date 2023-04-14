@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【pms_member_price(商品会员价格表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:50:44
+ * @date 2023-04-14 17:11:21
  */
 @Mapper
 public interface PmsMemberPriceMapper extends IBaseMapper<PmsMemberPrice> {

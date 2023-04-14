@@ -7,7 +7,7 @@ import com.rystars.mall.admin.sms.flash.bean.SmsFlashPromotionSession;
  * 【sms_flash_promotion_session(限时购场次表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:54:34
+ * @date 2023-04-14 17:12:02
  */
 public interface SmsFlashPromotionSessionService extends IBaseService<SmsFlashPromotionSession> {
 

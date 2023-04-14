@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【pms_product(商品信息)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:50:56
+ * @date 2023-04-14 17:11:31
  */
 @Mapper
 public interface PmsProductMapper extends IBaseMapper<PmsProduct> {

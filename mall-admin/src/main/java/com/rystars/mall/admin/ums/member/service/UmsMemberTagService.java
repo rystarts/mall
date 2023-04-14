@@ -7,7 +7,7 @@ import com.rystars.mall.admin.ums.member.bean.UmsMemberTag;
  * 【ums_member_tag(用户标签表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:58:52
+ * @date 2023-04-14 17:12:53
  */
 public interface UmsMemberTagService extends IBaseService<UmsMemberTag> {
 

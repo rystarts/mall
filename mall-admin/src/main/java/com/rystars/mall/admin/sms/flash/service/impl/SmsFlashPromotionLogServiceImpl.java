@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * 【sms_flash_promotion_log(限时购通知记录)】ServiceImpl
  *
  * @author rystars
- * @date 2023-04-13 10:54:34
+ * @date 2023-04-14 17:12:02
  */
 @Slf4j
 @Service

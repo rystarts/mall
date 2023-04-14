@@ -7,7 +7,7 @@ import com.rystars.mall.admin.pms.product.bean.PmsProduct;
  * 【pms_product(商品信息)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:50:56
+ * @date 2023-04-14 17:11:31
  */
 public interface PmsProductService extends IBaseService<PmsProduct> {
 

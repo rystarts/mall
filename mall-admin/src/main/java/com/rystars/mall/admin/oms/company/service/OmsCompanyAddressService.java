@@ -7,7 +7,7 @@ import com.rystars.mall.admin.oms.company.bean.OmsCompanyAddress;
  * 【oms_company_address(公司收发货地址表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:43:28
+ * @date 2023-04-14 17:10:28
  */
 public interface OmsCompanyAddressService extends IBaseService<OmsCompanyAddress> {
 

@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【ums_resource_category(资源分类表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:59:24
+ * @date 2023-04-14 17:13:22
  */
 @Mapper
 public interface UmsResourceCategoryMapper extends IBaseMapper<UmsResourceCategory> {

@@ -7,7 +7,7 @@ import com.rystars.mall.admin.pms.member.bean.PmsMemberPrice;
  * 【pms_member_price(商品会员价格表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:50:44
+ * @date 2023-04-14 17:11:21
  */
 public interface PmsMemberPriceService extends IBaseService<PmsMemberPrice> {
 

@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【ums_admin_role_relation(后台用户和角色关系表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:58:12
+ * @date 2023-04-14 17:12:20
  */
 @Mapper
 public interface UmsAdminRoleRelationMapper extends IBaseMapper<UmsAdminRoleRelation> {

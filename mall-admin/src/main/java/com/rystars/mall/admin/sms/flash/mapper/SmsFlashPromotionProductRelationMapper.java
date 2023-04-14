@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【sms_flash_promotion_product_relation(商品限时购与商品关系表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:54:34
+ * @date 2023-04-14 17:12:02
  */
 @Mapper
 public interface SmsFlashPromotionProductRelationMapper extends IBaseMapper<SmsFlashPromotionProductRelation> {

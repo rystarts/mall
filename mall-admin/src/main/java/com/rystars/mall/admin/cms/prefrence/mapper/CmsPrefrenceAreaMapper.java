@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【cms_prefrence_area(优选专区)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:38:54
+ * @date 2023-04-14 17:09:53
  */
 @Mapper
 public interface CmsPrefrenceAreaMapper extends IBaseMapper<CmsPrefrenceArea> {

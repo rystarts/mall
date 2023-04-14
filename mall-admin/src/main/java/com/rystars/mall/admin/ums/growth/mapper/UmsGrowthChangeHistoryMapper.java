@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【ums_growth_change_history(成长值变化历史记录表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:58:25
+ * @date 2023-04-14 17:12:27
  */
 @Mapper
 public interface UmsGrowthChangeHistoryMapper extends IBaseMapper<UmsGrowthChangeHistory> {

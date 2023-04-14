@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【pms_feight_template(运费模版)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:50:37
+ * @date 2023-04-14 17:11:14
  */
 @Mapper
 public interface PmsFeightTemplateMapper extends IBaseMapper<PmsFeightTemplate> {

@@ -7,7 +7,7 @@ import com.rystars.mall.admin.ums.member.bean.UmsMemberTask;
  * 【ums_member_task(会员任务表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:58:52
+ * @date 2023-04-14 17:12:53
  */
 public interface UmsMemberTaskService extends IBaseService<UmsMemberTask> {
 

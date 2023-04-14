@@ -7,7 +7,7 @@ import com.rystars.mall.admin.ums.admin.bean.UmsAdminRoleRelation;
  * 【ums_admin_role_relation(后台用户和角色关系表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:58:13
+ * @date 2023-04-14 17:12:20
  */
 public interface UmsAdminRoleRelationService extends IBaseService<UmsAdminRoleRelation> {
 

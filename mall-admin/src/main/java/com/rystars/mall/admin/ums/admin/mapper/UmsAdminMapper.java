@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【ums_admin(后台用户表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:58:12
+ * @date 2023-04-14 17:12:20
  */
 @Mapper
 public interface UmsAdminMapper extends IBaseMapper<UmsAdmin> {

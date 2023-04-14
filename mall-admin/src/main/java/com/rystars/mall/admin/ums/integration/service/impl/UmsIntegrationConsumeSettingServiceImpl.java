@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * 【ums_integration_consume_setting(积分消费设置)】ServiceImpl
  *
  * @author rystars
- * @date 2023-04-13 10:58:39
+ * @date 2023-04-14 17:12:41
  */
 @Slf4j
 @Service

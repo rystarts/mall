@@ -92,15 +92,12 @@ public class RedisHelper {
      *
      * @param key   键
      * @param value 值
-     * @return true成功 false失败
      */
-    public boolean set(String key, Object value) {
+    public void set(String key, Object value) {
         try {
             redisTemplate.opsForValue().set(key, value);
-            return true;
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
         }
     }
 

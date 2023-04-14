@@ -7,7 +7,7 @@ import com.rystars.mall.admin.pms.feight.bean.PmsFeightTemplate;
  * 【pms_feight_template(运费模版)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:50:37
+ * @date 2023-04-14 17:11:14
  */
 public interface PmsFeightTemplateService extends IBaseService<PmsFeightTemplate> {
 

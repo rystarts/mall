@@ -7,7 +7,7 @@ import com.rystars.mall.admin.ums.menu.bean.UmsMenu;
  * 【ums_menu(后台菜单表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:59:04
+ * @date 2023-04-14 17:13:01
  */
 public interface UmsMenuService extends IBaseService<UmsMenu> {
 

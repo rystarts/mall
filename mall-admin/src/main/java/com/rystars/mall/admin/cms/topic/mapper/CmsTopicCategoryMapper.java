@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【cms_topic_category(话题分类表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:39:19
+ * @date 2023-04-14 17:10:10
  */
 @Mapper
 public interface CmsTopicCategoryMapper extends IBaseMapper<CmsTopicCategory> {

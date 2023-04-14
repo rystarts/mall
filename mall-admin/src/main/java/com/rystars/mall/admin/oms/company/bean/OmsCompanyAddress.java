@@ -1,7 +1,6 @@
 package com.rystars.mall.admin.oms.company.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.rystars.mall.admin.frame.base.bean.BaseBean;
@@ -9,24 +8,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serial;
-import java.io.Serializable;
-
 /**
  * 【oms_company_address(公司收发货地址表)】Bean
  *
  * @author rystars
- * @date 2023-04-13 10:43:28
+ * @date 2023-04-14 17:10:28
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName(value = "oms_company_address")
 @Schema(description = "oms_company_address(公司收发货地址表)")
-public class OmsCompanyAddress extends BaseBean<OmsCompanyAddress> implements Serializable {
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class OmsCompanyAddress extends BaseBean {
 
     @TableId(type = IdType.AUTO)
     @Schema(description = "id")

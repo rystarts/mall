@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * 【ums_admin_permission_relation(后台用户和权限关系表(除角色中定义的权限以外的加减权限))】ServiceImpl
  *
  * @author rystars
- * @date 2023-04-13 10:58:12
+ * @date 2023-04-14 17:12:20
  */
 @Slf4j
 @Service

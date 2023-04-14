@@ -7,7 +7,7 @@ import com.rystars.mall.admin.oms.order.bean.OmsOrderSetting;
  * 【oms_order_setting(订单设置表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:43:38
+ * @date 2023-04-14 17:10:38
  */
 public interface OmsOrderSettingService extends IBaseService<OmsOrderSetting> {
 

@@ -1,7 +1,6 @@
 package com.rystars.mall.admin.cms.subject.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.rystars.mall.admin.frame.base.bean.BaseBean;
@@ -9,24 +8,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serial;
-import java.io.Serializable;
-
 /**
  * 【cms_subject_category(专题分类表)】Bean
  *
  * @author rystars
- * @date 2023-04-13 10:39:09
+ * @date 2023-04-14 17:10:02
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName(value = "cms_subject_category")
 @Schema(description = "cms_subject_category(专题分类表)")
-public class CmsSubjectCategory extends BaseBean<CmsSubjectCategory> implements Serializable {
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class CmsSubjectCategory extends BaseBean {
 
     @TableId(type = IdType.AUTO)
     @Schema(description = "id")

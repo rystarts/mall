@@ -19,11 +19,7 @@ import com.rystars.mall.admin.frame.base.bean.BaseBean;
 @EqualsAndHashCode(callSuper = true)
 @TableName(value ="${tableClass.tableName}")
 @Schema(description = "${tableClass.tableName}<#if tableClass.remark?has_content>(${tableClass.remark!})</#if>")
-public class ${bean.fileName} extends BaseBean<${bean.fileName}> implements Serializable{
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class ${bean.fileName} extends BaseBean {
 
 <#list tableClass.allFields as field>
     <#if field.fieldName=="id">@TableId(type= IdType.AUTO)</#if>

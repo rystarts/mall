@@ -9,22 +9,22 @@ public enum ResultEnum implements IResult {
     /**
      * 接口调用成功
      */
-    SUCCESS(201, "接口调用成功"),
+    SUCCESS(200, "接口调用成功"),
 
     /**
      * 接口调用失败
      */
-    FAILED(202, "接口调用失败"),
+    FAILED(201, "接口调用失败"),
 
     /**
      * 参数校验失败
      */
-    VALIDATE_FAILED(203, "参数校验失败"),
+    VALIDATE_FAILED(202, "参数校验失败"),
 
     /**
      * 没有权限访问资源
      */
-    AUTH_FAILED(204, "没有权限访问资源");
+    AUTH_FAILED(203, "没有权限访问资源");
 
     private Integer code;
 

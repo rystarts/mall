@@ -1,7 +1,6 @@
 package com.rystars.mall.admin.cms.help.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.rystars.mall.admin.frame.base.bean.BaseBean;
@@ -9,25 +8,19 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 【cms_help(帮助表)】Bean
  *
  * @author rystars
- * @date 2023-04-13 10:38:18
+ * @date 2023-04-14 17:09:30
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName(value = "cms_help")
 @Schema(description = "cms_help(帮助表)")
-public class CmsHelp extends BaseBean<CmsHelp> implements Serializable {
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class CmsHelp extends BaseBean {
 
     @TableId(type = IdType.AUTO)
     @Schema(description = "id")

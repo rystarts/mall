@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【pms_sku_stock(sku的库存)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:51:06
+ * @date 2023-04-14 17:11:38
  */
 @Mapper
 public interface PmsSkuStockMapper extends IBaseMapper<PmsSkuStock> {

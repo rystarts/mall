@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * 【ums_admin_login_log(后台用户登录日志表)】ServiceImpl
  *
  * @author rystars
- * @date 2023-04-13 10:58:12
+ * @date 2023-04-14 17:12:20
  */
 @Slf4j
 @Service

@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【sms_home_recommend_product(人气推荐商品表)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:54:46
+ * @date 2023-04-14 17:12:11
  */
 @Mapper
 public interface SmsHomeRecommendProductMapper extends IBaseMapper<SmsHomeRecommendProduct> {

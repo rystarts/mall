@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 【ums_integration_consume_setting(积分消费设置)】Mapper
  *
  * @author rystars
- * @date 2023-04-13 10:58:39
+ * @date 2023-04-14 17:12:41
  */
 @Mapper
 public interface UmsIntegrationConsumeSettingMapper extends IBaseMapper<UmsIntegrationConsumeSetting> {

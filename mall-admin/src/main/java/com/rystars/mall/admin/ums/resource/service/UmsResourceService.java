@@ -7,7 +7,7 @@ import com.rystars.mall.admin.ums.resource.bean.UmsResource;
  * 【ums_resource(后台资源表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:59:24
+ * @date 2023-04-14 17:13:22
  */
 public interface UmsResourceService extends IBaseService<UmsResource> {
 

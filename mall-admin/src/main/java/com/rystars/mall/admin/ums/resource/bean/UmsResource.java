@@ -1,7 +1,6 @@
 package com.rystars.mall.admin.ums.resource.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.rystars.mall.admin.frame.base.bean.BaseBean;
@@ -9,25 +8,19 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 【ums_resource(后台资源表)】Bean
  *
  * @author rystars
- * @date 2023-04-13 10:59:24
+ * @date 2023-04-14 17:13:22
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName(value = "ums_resource")
 @Schema(description = "ums_resource(后台资源表)")
-public class UmsResource extends BaseBean<UmsResource> implements Serializable {
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class UmsResource extends BaseBean {
 
     @TableId(type = IdType.AUTO)
     @Schema(description = "id")

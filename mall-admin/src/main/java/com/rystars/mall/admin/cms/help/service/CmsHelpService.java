@@ -7,7 +7,7 @@ import com.rystars.mall.admin.frame.base.service.IBaseService;
  * 【cms_help(帮助表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:38:18
+ * @date 2023-04-14 17:09:30
  */
 public interface CmsHelpService extends IBaseService<CmsHelp> {
 

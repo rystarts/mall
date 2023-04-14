@@ -7,7 +7,7 @@ import com.rystars.mall.admin.pms.comment.bean.PmsComment;
  * 【pms_comment(商品评价表)】Service
  *
  * @author rystars
- * @date 2023-04-13 10:50:29
+ * @date 2023-04-14 17:11:05
  */
 public interface PmsCommentService extends IBaseService<PmsComment> {
 
