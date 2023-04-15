@@ -4,6 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * mybatis-xml-reload配置类
+ * @author rystars
  */
 @ConfigurationProperties(prefix = "mybatis-xml-reload")
 public class MybatisXmlReloadProperties {

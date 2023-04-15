@@ -1,5 +1,6 @@
 package com.rystars.mall.admin.frame.result;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,12 +13,16 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "响应结果信息")
 public class Result<T> {
 
+    @Schema(description = "状态码")
     private Integer code;
 
+    @Schema(description = "响应消息")
     private String message;
 
+    @Schema(description = "结果数据")
     private T data;
 
     public static <T> Result<T> success(T data) {

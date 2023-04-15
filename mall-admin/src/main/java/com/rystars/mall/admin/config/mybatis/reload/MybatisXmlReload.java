@@ -27,10 +27,19 @@ import java.util.stream.Stream;
 
 /**
  * mybatis-xml-reload 核心xml热加载逻辑
+ * @author rystars
  */
 public class MybatisXmlReload {
 
     private static final Logger logger = LoggerFactory.getLogger(MybatisXmlReload.class);
+    public static final String MYBATIS_CONFIGURATION = "MybatisConfiguration";
+
+    /**
+     * Pattern CLASS_PATH_PATTERN = Pattern.compile("(classpath\\*?:)(\\w*)");
+     */
+    public static final String CLASS_PATH_TARGET = File.separator + "target" + File.separator + "classes";
+    public static final String MAVEN_RESOURCES = "/src/main/resources";
+    public static final String XML_RELOAD = "xml-reload";
 
 
     private final MybatisXmlReloadProperties prop;
@@ -58,13 +67,8 @@ public class MybatisXmlReload {
         return resultMapsField.get(targetConfiguration);
     }
 
-    @SuppressWarnings("unchecked")
     public void xmlReload() throws IOException {
         PathMatchingResourcePatternResolver patternResolver = new PathMatchingResourcePatternResolver();
-        String CLASS_PATH_TARGET = File.separator + "target" + File.separator + "classes";
-        String MAVEN_RESOURCES = "/src/main/resources";
-        // Pattern CLASS_PATH_PATTERN = Pattern.compile("(classpath\\*?:)(\\w*)");
-
         List<Resource> mapperLocationsTmp = Stream.of(Optional.of(prop.getMapperLocations()).orElse(new String[0]))
                 .flatMap(location -> Stream.of(getResources(patternResolver, location))).toList();
 
@@ -80,10 +84,17 @@ public class MybatisXmlReload {
                 mapperLocations.add(fileSystemResource);
             }
         }
-
         List<Path> rootPaths = new ArrayList<>(locationPatternSet);
-        DirectoryWatcher watcher = DirectoryWatcher.builder()
-                .paths(rootPaths) // or use paths(directoriesToWatch)
+        DirectoryWatcher watcher = getDirectoryWatcher(mapperLocations, rootPaths);
+        ThreadFactory threadFactory = getThreadFactory();
+        watcher.watchAsync(new ScheduledThreadPoolExecutor(1, threadFactory));
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private DirectoryWatcher getDirectoryWatcher(List<Resource> mapperLocations, List<Path> rootPaths) throws IOException {
+        return DirectoryWatcher.builder()
+                .paths(rootPaths)
                 .listener(event -> {
                     switch (event.eventType()) {
                         case CREATE: /* file created */
@@ -96,7 +107,7 @@ public class MybatisXmlReload {
                                 try {
                                     Configuration targetConfiguration = sqlSessionFactory.getConfiguration();
                                     Class<?> tClass = targetConfiguration.getClass(), aClass = targetConfiguration.getClass();
-                                    if (targetConfiguration.getClass().getSimpleName().equals("MybatisConfiguration")) {
+                                    if (MYBATIS_CONFIGURATION.equals(targetConfiguration.getClass().getSimpleName())) {
                                         aClass = Configuration.class;
                                     }
                                     Set<String> loadedResources = (Set<String>) getFieldValue(targetConfiguration, aClass, "loadedResources");
@@ -152,14 +163,15 @@ public class MybatisXmlReload {
                 // .logger(logger) // defaults to LoggerFactory.getLogger(DirectoryWatcher.class)
                 // .watchService(watchService) // defaults based on OS to either JVM WatchService or the JNA macOS WatchService
                 .build();
-        ThreadFactory threadFactory = r -> {
+    }
+
+    private static ThreadFactory getThreadFactory() {
+        return r -> {
             Thread thread = new Thread(r);
-            thread.setName("xml-reload");
+            thread.setName(XML_RELOAD);
             thread.setDaemon(true);
             return thread;
         };
-        watcher.watchAsync(new ScheduledThreadPoolExecutor(1, threadFactory));
-
     }
 
     /**

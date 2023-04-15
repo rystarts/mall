@@ -9,14 +9,16 @@ import org.springframework.beans.factory.annotation.Value;
 import java.util.Scanner;
 
 /**
+ * 加密解密工具类
  * @author rystars
  * @date 2023/4/11
- * 加密解密工具类
  */
 public class EncryptUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EncryptUtil.class);
-    // 读取盐值
+    /**
+     * 读取盐值
+     */
     @Value("${jasypt.encryptor.password}")
     private static String password;
 
