@@ -113,7 +113,7 @@ mybatis-xml-reload:
 #swagger配置
 springdoc:
   swagger-ui:
-    #配置swagger-ui请求路径
+    #配置swagger-ui请求路径 ip:host/rystars/swagger
     path: swagger
     #API的排序方式 alpha按字母排序
     tags-sorter: alpha

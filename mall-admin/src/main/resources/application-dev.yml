@@ -8,20 +8,21 @@ spring:
     #驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
     #用户名
-    username: RYSTARS(hfe5OllBfO+rZsCD4NUwOw==)
+    username: RYSTARS(jS3iLwHJfrEwfbUnWsdRqg==)
     #密码
-    password: RYSTARS(LaDjX+pgbKXd3s5ePIn8fQVMi1zaIqu0)
+    password: RYSTARS(2BjOUJWqzoBt86HdfEUqK8jZt9mKtUAn)
     #url
-    url: RYSTARS(l0cKU/p4Ge5EkaURaPFI76gnzVgNSNuJ6USgy0fcEF6B9R8OjDPI4LIFycfXgui3)
+    #jdbc:mysql://43.138.200.193:3306/mall
+    url: RYSTARS(0tNrK2leWgKzd7wS4vgqF0MoJWyMmwr5T8HjbGR39mpY0Jg4GYCmt70uUzp51S+i)
   data:
     #配置redis
     redis:
       #ip
-      host: RYSTARS(RETrFY7PJh1pwdZT+P5LOitnr5Q+2q3k)
+      host: RYSTARS(jN78+ccE4d1dxMLx/orQiHRTUTVt1ftR)
       #端口
       port: 6379
       #密码
-      password: RYSTARS(pN50YeE6ElX9v87MGiF3EQ==)
+      password: RYSTARS(U19UhBPsaAH75CLKf5wUlA==)
       #数据库
       database: 0
       #配置连接池
