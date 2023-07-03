@@ -3,8 +3,7 @@ package com.rystars.mall.admin.config.mybatis.reload.configuration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * mybatis-xml-reload配置类
- * @author rystars
+ * mybatis-xml-reload配置属性类
  */
 @ConfigurationProperties(prefix = "mybatis-xml-reload")
 public class MybatisXmlReloadProperties {

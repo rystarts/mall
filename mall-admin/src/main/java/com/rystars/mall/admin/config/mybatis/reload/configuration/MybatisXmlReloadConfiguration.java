@@ -11,9 +11,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * mybatis xml file hot reload configuration.
+ * mybatis xml热加载自动配置
  *
- * @author rystars
+ * @author wayn
  */
 @Configuration
 @EnableConfigurationProperties({MybatisXmlReloadProperties.class})

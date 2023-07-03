@@ -20,81 +20,65 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * mybatis-xml-reload 核心xml热加载逻辑
- * @author rystars
+ * mybatis-xml-reload核心xml热加载逻辑
  */
 public class MybatisXmlReload {
 
     private static final Logger logger = LoggerFactory.getLogger(MybatisXmlReload.class);
-    public static final String MYBATIS_CONFIGURATION = "MybatisConfiguration";
-
-    /**
-     * Pattern CLASS_PATH_PATTERN = Pattern.compile("(classpath\\*?:)(\\w*)");
-     */
-    public static final String CLASS_PATH_TARGET = File.separator + "target" + File.separator + "classes";
-    public static final String MAVEN_RESOURCES = "/src/main/resources";
-    public static final String XML_RELOAD = "xml-reload";
 
 
-    private final MybatisXmlReloadProperties prop;
-    private final List<SqlSessionFactory> sqlSessionFactories;
+    private MybatisXmlReloadProperties prop;
+    private List<SqlSessionFactory> sqlSessionFactories;
 
     public MybatisXmlReload(MybatisXmlReloadProperties prop, List<SqlSessionFactory> sqlSessionFactories) {
         this.prop = prop;
         this.sqlSessionFactories = sqlSessionFactories;
     }
 
-    /**
-     * 根据反射获取Configuration对象中属性
-     *
-     * @param targetConfiguration targetConfiguration
-     * @param aClass              aClass
-     * @param filed               filed
-     * @return return
-     * @throws NoSuchFieldException   NoSuchFieldException
-     * @throws IllegalAccessException IllegalAccessException
-     */
-    private static Object getFieldValue(Configuration targetConfiguration, Class<?> aClass,
-                                        String filed) throws NoSuchFieldException, IllegalAccessException {
-        Field resultMapsField = aClass.getDeclaredField(filed);
-        resultMapsField.setAccessible(true);
-        return resultMapsField.get(targetConfiguration);
-    }
-
     public void xmlReload() throws IOException {
         PathMatchingResourcePatternResolver patternResolver = new PathMatchingResourcePatternResolver();
+        String class_path_target_dir = File.separator + "target" + File.separator + "classes";
+        String maven_resources_dir = "/src/main/resources";
+        String maven_java_dir = "/src/main/java";
+        // Pattern CLASS_PATH_PATTERN = Pattern.compile("(classpath\\*?:)(\\w*)");
+
         List<Resource> mapperLocationsTmp = Stream.of(Optional.of(prop.getMapperLocations()).orElse(new String[0]))
-                .flatMap(location -> Stream.of(getResources(patternResolver, location))).toList();
+                .flatMap(location -> Stream.of(getResources(patternResolver, location))).collect(Collectors.toList());
 
         List<Resource> mapperLocations = new ArrayList<>(mapperLocationsTmp.size() * 2);
         Set<Path> locationPatternSet = new HashSet<>();
         for (Resource mapperLocation : mapperLocationsTmp) {
             mapperLocations.add(mapperLocation);
-            String absolutePath = mapperLocation.getFile().getAbsolutePath();
-            File tmpFile = new File(absolutePath.replace(CLASS_PATH_TARGET, MAVEN_RESOURCES));
-            if (tmpFile.exists()) {
-                locationPatternSet.add(Path.of(tmpFile.getParent()));
-                FileSystemResource fileSystemResource = new FileSystemResource(tmpFile);
-                mapperLocations.add(fileSystemResource);
+            // 判断xml文件存放位置，只读取文件类型的xml文件，jar里的xml文件不做读取
+            if (mapperLocation.isFile()) {
+                mapperLocation.getFile();
+                String absolutePath = mapperLocation.getFile().getAbsolutePath();
+                // 先从maven_resources_dir目录下找xml文件目录，不存在就去maven_java_dir下找xml文件目录，都找不到就只能取target目录下xml文件目录
+                File tmpFile = new File(absolutePath.replace(class_path_target_dir, maven_resources_dir));
+                if (!tmpFile.exists()) {
+                    tmpFile = new File(absolutePath.replace(class_path_target_dir, maven_java_dir));
+                }
+                if (tmpFile.exists()) {
+                    locationPatternSet.add(Paths.get(tmpFile.getParent()));
+                    FileSystemResource fileSystemResource = new FileSystemResource(tmpFile);
+                    mapperLocations.add(fileSystemResource);
+                } else {
+                    locationPatternSet.add(Paths.get(mapperLocation.getFile().getParent()));
+                }
             }
         }
+
         List<Path> rootPaths = new ArrayList<>(locationPatternSet);
-        DirectoryWatcher watcher = getDirectoryWatcher(mapperLocations, rootPaths);
-        ThreadFactory threadFactory = getThreadFactory();
-        watcher.watchAsync(new ScheduledThreadPoolExecutor(1, threadFactory));
-
-    }
-
-    @SuppressWarnings("unchecked")
-    private DirectoryWatcher getDirectoryWatcher(List<Resource> mapperLocations, List<Path> rootPaths) throws IOException {
-        return DirectoryWatcher.builder()
-                .paths(rootPaths)
+        DirectoryWatcher watcher = DirectoryWatcher.builder()
+                .paths(rootPaths) // or use paths(directoriesToWatch)
                 .listener(event -> {
                     switch (event.eventType()) {
                         case CREATE: /* file created */
@@ -102,12 +86,15 @@ public class MybatisXmlReload {
                         case MODIFY: /* file modified */
                             Path modifyPath = event.path();
                             String absolutePath = modifyPath.toFile().getAbsolutePath();
-                            logger.info("mybatis xml file has changed:" + modifyPath);
+                            if (!new File(absolutePath).exists()) {
+                                break;
+                            }
+                            logger.info("mybatis xml file has changed: '{}'", absolutePath);
                             for (SqlSessionFactory sqlSessionFactory : sqlSessionFactories) {
                                 try {
                                     Configuration targetConfiguration = sqlSessionFactory.getConfiguration();
                                     Class<?> tClass = targetConfiguration.getClass(), aClass = targetConfiguration.getClass();
-                                    if (MYBATIS_CONFIGURATION.equals(targetConfiguration.getClass().getSimpleName())) {
+                                    if (targetConfiguration.getClass().getSimpleName().equals("MybatisConfiguration")) {
                                         aClass = Configuration.class;
                                     }
                                     Set<String> loadedResources = (Set<String>) getFieldValue(targetConfiguration, aClass, "loadedResources");
@@ -118,6 +105,9 @@ public class MybatisXmlReload {
                                     Map<String, MappedStatement> mappedStatementMaps = (Map<String, MappedStatement>) getFieldValue(targetConfiguration, tClass, "mappedStatements");
 
                                     for (Resource mapperLocation : mapperLocations) {
+                                        if (!mapperLocation.isFile()) {
+                                            continue;
+                                        }
                                         if (!absolutePath.equals(mapperLocation.getFile().getAbsolutePath())) {
                                             continue;
                                         }
@@ -148,7 +138,7 @@ public class MybatisXmlReload {
                                         } catch (Exception e) {
                                             logger.error(e.getMessage(), e);
                                         }
-                                        logger.info("Parsed mapper file: '" + mapperLocation + "'");
+                                        logger.info("mapperLocation reload success: '{}'", mapperLocation);
                                     }
                                 } catch (Exception e) {
                                     logger.error(e.getMessage(), e);
@@ -163,15 +153,14 @@ public class MybatisXmlReload {
                 // .logger(logger) // defaults to LoggerFactory.getLogger(DirectoryWatcher.class)
                 // .watchService(watchService) // defaults based on OS to either JVM WatchService or the JNA macOS WatchService
                 .build();
-    }
-
-    private static ThreadFactory getThreadFactory() {
-        return r -> {
+        ThreadFactory threadFactory = r -> {
             Thread thread = new Thread(r);
-            thread.setName(XML_RELOAD);
+            thread.setName("xml-reload");
             thread.setDaemon(true);
             return thread;
         };
+        watcher.watchAsync(new ScheduledThreadPoolExecutor(1, threadFactory));
+
     }
 
     /**
@@ -186,5 +175,22 @@ public class MybatisXmlReload {
         } catch (IOException e) {
             return new Resource[0];
         }
+    }
+
+    /**
+     * 根据反射获取Configuration对象中属性
+     *
+     * @param targetConfiguration
+     * @param aClass
+     * @param filed
+     * @return
+     * @throws NoSuchFieldException
+     * @throws IllegalAccessException
+     */
+    private static Object getFieldValue(Configuration targetConfiguration, Class<?> aClass,
+                                        String filed) throws NoSuchFieldException, IllegalAccessException {
+        Field resultMapsField = aClass.getDeclaredField(filed);
+        resultMapsField.setAccessible(true);
+        return resultMapsField.get(targetConfiguration);
     }
 }
